@@ -18,7 +18,11 @@ static ESJsonFormat *instance;
 @property (nonatomic, assign) BOOL isSwift;
 
 + (instancetype)sharedPlugin;
+
 + (instancetype)instance;
+
 - (id)initWithBundle:(NSBundle *)plugin;
-@property (nonatomic, strong, readonly) NSBundle* bundle;
+
+@property (nonatomic, strong, readonly) NSBundle *bundle;
+
 @end
