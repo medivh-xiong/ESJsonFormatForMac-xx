@@ -173,12 +173,12 @@
     if ([ESJsonFormatSetting defaultSetting].impOjbClassInArray) {
         BOOL isYYModel = [[NSUserDefaults standardUserDefaults] boolForKey:@"isYYModel"];
         if (isYYModel) {
-            [result appendFormat:@"@implementation %@\n%@\n%@%@\n\n@end\n", classInfo.className, [self methodContentOfObjectClassInArrayWithClassInfo:classInfo], [self methodContentOfObjectIDInArrayWithClassInfo:classInfo], [self methodContentOfObjectDescribe]];
+            [result appendFormat:@"@implementation %@\n%@\n%@%@\n%@\n\n@end\n\n", classInfo.className, [self methodContentOfObjectClassInArrayWithClassInfo:classInfo], [self methodContentOfObjectIDInArrayWithClassInfo:classInfo], [self methodContentOfObjectDescribe], [self methodContentOfObjectArchive]];
         } else {
-            [result appendFormat:@"@implementation %@\n%@\n@end\n", classInfo.className, [self methodContentOfObjectClassInArrayWithClassInfo:classInfo]];
+            [result appendFormat:@"@implementation %@\n%@\n@end\n\n", classInfo.className, [self methodContentOfObjectClassInArrayWithClassInfo:classInfo]];
         }
     } else {
-        [result appendFormat:@"@implementation %@\n\n@end\n", classInfo.className];
+        [result appendFormat:@"@implementation %@\n\n@end\n\n", classInfo.className];
     }
 
     if ([ESJsonFormatSetting defaultSetting].outputToFiles) {
@@ -213,7 +213,7 @@
         result = [NSMutableString stringWithFormat:@"@interface %@ : NSObject\n", classInfo.className];
     }
     [result appendString:classInfo.propertyContent];
-    [result appendString:@"\n@end"];
+    [result appendString:@"\n@end\n\n"];
 
     if ([ESJsonFormatSetting defaultSetting].outputToFiles) {
         //headerStr
@@ -262,8 +262,6 @@
  */
 + (NSString *)methodContentOfObjectClassInArrayWithClassInfo:(ESClassInfo *)classInfo
 {
-
-
     if (classInfo.propertyArrayDic.count == 0) {
         return @"";
     } else {
@@ -321,6 +319,26 @@
         methodStr = @"- (NSString *)description\n"
                     "{\n"
                     "    return [self yy_modelDescription];\n"
+                    "}\n";
+    } else {
+        methodStr = @"";
+    }
+    return methodStr;
+}
+
++ (NSString *)methodContentOfObjectArchive
+{
+    BOOL isArchive = [[NSUserDefaults standardUserDefaults] boolForKey:@"isArchive"];
+    NSString *methodStr = nil;
+    if (isArchive) {
+        methodStr = @"- (void)encodeWithCoder:(NSCoder *)coder\n"
+                    "{\n"
+                    "    [self yy_modelEncodeWithCoder:coder];\n"
+                    "}\n"
+                    "\n"
+                    "- (instancetype)initWithCoder:(NSCoder *)coder\n"
+                    "{\n"
+                    "    return [self yy_modelInitWithCoder:coder];\n"
                     "}";
     } else {
         methodStr = @"";

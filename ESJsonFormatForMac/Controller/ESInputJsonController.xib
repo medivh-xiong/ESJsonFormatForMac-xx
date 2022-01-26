@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ESInputJsonController">
             <connections>
+                <outlet property="archiveSwitch" destination="zkQ-si-fCt" id="pIu-vy-1nI"/>
                 <outlet property="btnBackView" destination="jPX-oJ-igg" id="Sun-JX-qh2"/>
                 <outlet property="enterButton" destination="dcK-H9-JYv" id="Yns-8u-ChD"/>
                 <outlet property="hContentTextView" destination="5dn-bt-1pg" id="7xz-0m-j0u"/>
@@ -290,7 +291,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn identifier="value" width="153" minWidth="40" maxWidth="1000" id="aTa-qP-0bS">
+                                                <tableColumn identifier="value" width="124" minWidth="40" maxWidth="1000" id="aTa-qP-0bS">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Parameters_Value">
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -303,11 +304,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="te7-R3-367">
-                                                            <rect key="frame" x="169" y="1" width="157" height="17"/>
+                                                            <rect key="frame" x="169" y="1" width="128" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-3u-6Cb">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="ifM-aB-Tsp">
                                                                         <font key="font" metaFont="system"/>
@@ -476,7 +477,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-H9-JYv">
-                                <rect key="frame" x="43" y="60" width="64" height="32"/>
+                                <rect key="frame" x="43" y="84" width="64" height="32"/>
                                 <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aeX-a5-hlQ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -485,25 +486,47 @@
                                     <action selector="enterButtonClick:" target="-2" id="2qn-VI-Ssi"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zkQ-si-fCt">
+                                <rect key="frame" x="92" y="120" width="53" height="18"/>
+                                <buttonCell key="cell" type="check" title="归档" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="WYl-76-HFL">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="needArchive:" target="-2" id="7As-gk-Br2"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LJZ-Pw-7jc">
+                                <rect key="frame" x="3" y="121" width="58" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="是否归档" id="INE-YD-xb8">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="dcK-H9-JYv" firstAttribute="top" secondItem="dNY-x6-sCS" secondAttribute="bottom" constant="60" id="1SO-lm-lAE"/>
                             <constraint firstItem="vuI-NQ-io8" firstAttribute="top" secondItem="uIq-V2-dzr" secondAttribute="bottom" constant="30" id="4y4-Xc-aCz"/>
+                            <constraint firstItem="LJZ-Pw-7jc" firstAttribute="leading" secondItem="dNY-x6-sCS" secondAttribute="leading" id="7Ec-0B-NU6"/>
                             <constraint firstItem="dcK-H9-JYv" firstAttribute="centerX" secondItem="9fW-dT-lXs" secondAttribute="centerX" id="8eO-cD-uWe"/>
                             <constraint firstItem="9fW-dT-lXs" firstAttribute="centerX" secondItem="Mqp-5Y-Hqh" secondAttribute="centerX" id="BDe-qw-wjG"/>
+                            <constraint firstItem="LJZ-Pw-7jc" firstAttribute="top" secondItem="dNY-x6-sCS" secondAttribute="bottom" constant="10" id="DiW-Is-XLc"/>
                             <constraint firstItem="vsV-DL-JN2" firstAttribute="centerX" secondItem="9fW-dT-lXs" secondAttribute="centerX" id="Dvg-5n-7Pq"/>
                             <constraint firstItem="Qji-MD-Noo" firstAttribute="centerX" secondItem="9fW-dT-lXs" secondAttribute="centerX" id="Dz7-4U-fDU"/>
                             <constraint firstItem="9fW-dT-lXs" firstAttribute="top" secondItem="f6A-b3-xcT" secondAttribute="bottom" constant="30" id="HNZ-dp-eQy"/>
                             <constraint firstItem="dNY-x6-sCS" firstAttribute="top" secondItem="vuI-NQ-io8" secondAttribute="bottom" constant="30" id="KAA-QX-nPG"/>
                             <constraint firstItem="dNY-x6-sCS" firstAttribute="leading" secondItem="Mqp-5Y-Hqh" secondAttribute="leading" constant="5" id="M9i-hb-snx"/>
+                            <constraint firstItem="dcK-H9-JYv" firstAttribute="top" secondItem="zkQ-si-fCt" secondAttribute="bottom" constant="10" id="Utz-Xn-ZuE"/>
                             <constraint firstItem="uIq-V2-dzr" firstAttribute="centerX" secondItem="9fW-dT-lXs" secondAttribute="centerX" id="Vbh-eC-67i"/>
                             <constraint firstItem="uIq-V2-dzr" firstAttribute="top" secondItem="vsV-DL-JN2" secondAttribute="bottom" constant="30" id="cc3-JQ-1fU"/>
                             <constraint firstItem="vuI-NQ-io8" firstAttribute="centerX" secondItem="uIq-V2-dzr" secondAttribute="centerX" id="fEK-gM-ORQ"/>
                             <constraint firstItem="f6A-b3-xcT" firstAttribute="top" secondItem="Mqp-5Y-Hqh" secondAttribute="top" id="ghE-cp-1i3"/>
                             <constraint firstItem="Qji-MD-Noo" firstAttribute="top" secondItem="9fW-dT-lXs" secondAttribute="bottom" constant="30" id="lxD-qG-PsU"/>
+                            <constraint firstItem="zkQ-si-fCt" firstAttribute="centerY" secondItem="LJZ-Pw-7jc" secondAttribute="centerY" id="nSq-eg-pIv"/>
                             <constraint firstAttribute="trailing" secondItem="dNY-x6-sCS" secondAttribute="trailing" constant="5" id="tHF-n0-CsF"/>
                             <constraint firstItem="vsV-DL-JN2" firstAttribute="top" secondItem="Qji-MD-Noo" secondAttribute="bottom" constant="30" id="u7A-Rl-luq"/>
                             <constraint firstItem="dNY-x6-sCS" firstAttribute="centerX" secondItem="vuI-NQ-io8" secondAttribute="centerX" id="wpU-kn-Cym"/>
+                            <constraint firstAttribute="trailing" secondItem="zkQ-si-fCt" secondAttribute="trailing" constant="5" id="yA4-tu-3gZ"/>
                             <constraint firstItem="f6A-b3-xcT" firstAttribute="centerX" secondItem="Mqp-5Y-Hqh" secondAttribute="centerX" id="z1W-8u-R0B"/>
                         </constraints>
                     </customView>

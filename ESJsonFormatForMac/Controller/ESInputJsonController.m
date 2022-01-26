@@ -59,6 +59,7 @@
 @property (nonatomic,assign) NSInteger  selectedRow;
 
 @property (nonatomic,assign) BOOL isPost;
+@property (weak) IBOutlet NSButton *archiveSwitch;
 
 @end
 
@@ -81,7 +82,10 @@
     self.superClassTextfield.delegate = self;
     [self.tableView reloadData];
     [self creatAddAndDeledateBtn];
-    
+
+    self.archiveSwitch.state = (NSControlStateValue) [[NSUserDefaults standardUserDefaults] objectForKey:@"isArchive"];
+
+
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -97,6 +101,7 @@
         //因为我没有找到设置segmentcontroller初始设置选中的方法...所以...这样了
         [[NSUserDefaults standardUserDefaults] setBool:self.isSwift forKey:@"isSwift"];
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isYYModel"];
+
         self.rowCount = 1;
         self.selectedRow = -1;
         
@@ -315,6 +320,11 @@
 }
 
 #pragma mark - Event Response
+
+- (IBAction)needArchive:(NSButton *)sender
+{
+    [[NSUserDefaults standardUserDefaults] setBool:(sender.state == 1) forKey:@"isArchive"];
+}
 
 - (IBAction)popUpBtnAction:(NSPopUpButton *)sender {
     
@@ -760,8 +770,9 @@
             NSString *mContent = [NSString stringWithFormat:@"%@\n%@",classInfo.classContentForM,classInfo.classInsertTextViewContentForM];
             self.mContentTextView.string = mContent;
             
-            //如果输入主类的话就一起显示了
+            //---- 配置.h的@class
             [self.hContentTextView insertText:classInfo.atClassContent replacementRange:NSMakeRange(0, self.hContentTextView.string.length)];
+            //---- 配置.h文件
             [self.hContentTextView insertText:[NSString stringWithFormat:@"\n%@",classInfo.classContentForH] replacementRange:NSMakeRange(self.hContentTextView.string.length, 0)];
             [self.hContentTextView insertText:[NSString stringWithFormat:@"\n%@",classInfo.classInsertTextViewContentForH] replacementRange:NSMakeRange(self.hContentTextView.string.length, 0)];
             
