@@ -173,7 +173,7 @@
     if ([ESJsonFormatSetting defaultSetting].impOjbClassInArray) {
         BOOL isYYModel = [[NSUserDefaults standardUserDefaults] boolForKey:@"isYYModel"];
         if (isYYModel) {
-            [result appendFormat:@"@implementation %@\n%@\n%@%@\n%@\n\n@end\n\n", classInfo.className, [self methodContentOfObjectClassInArrayWithClassInfo:classInfo], [self methodContentOfObjectIDInArrayWithClassInfo:classInfo], [self methodContentOfObjectDescribe], [self methodContentOfObjectArchive]];
+            [result appendFormat:@"@implementation %@\n%@\n%@%@%@\n@end\n\n", classInfo.className, [self methodContentOfObjectClassInArrayWithClassInfo:classInfo], [self methodContentOfObjectIDInArrayWithClassInfo:classInfo], [self methodContentOfObjectDescribe], [self methodContentOfObjectArchive]];
         } else {
             [result appendFormat:@"@implementation %@\n%@\n@end\n\n", classInfo.className, [self methodContentOfObjectClassInArrayWithClassInfo:classInfo]];
         }
@@ -207,10 +207,18 @@
 {
     NSString *superClassString = [[NSUserDefaults standardUserDefaults] valueForKey:@"SuperClass"];
     NSMutableString *result = nil;
+
     if (superClassString && superClassString.length > 0) {
-        result = [NSMutableString stringWithFormat:@"@interface %@ : %@\n", classInfo.className, superClassString];
+        result = [NSMutableString stringWithFormat:@"@interface %@ : %@", classInfo.className, superClassString];
     } else {
-        result = [NSMutableString stringWithFormat:@"@interface %@ : NSObject\n", classInfo.className];
+        result = [NSMutableString stringWithFormat:@"@interface %@ : NSObject", classInfo.className];
+    }
+    //---- 判断是否需要归档
+    BOOL isArchive = [[NSUserDefaults standardUserDefaults] boolForKey:@"isArchive"];
+    if (isArchive) {
+        [result appendString:@" <NSCoding>\n"];
+    }else {
+        [result appendString:@"\n"];
     }
     [result appendString:classInfo.propertyContent];
     [result appendString:@"\n@end\n\n"];
@@ -331,7 +339,7 @@
     BOOL isArchive = [[NSUserDefaults standardUserDefaults] boolForKey:@"isArchive"];
     NSString *methodStr = nil;
     if (isArchive) {
-        methodStr = @"- (void)encodeWithCoder:(NSCoder *)coder\n"
+        methodStr = @"\n\n#pragma mark - Archive\n\n- (void)encodeWithCoder:(NSCoder *)coder\n"
                     "{\n"
                     "    [self yy_modelEncodeWithCoder:coder];\n"
                     "}\n"
@@ -339,7 +347,7 @@
                     "- (instancetype)initWithCoder:(NSCoder *)coder\n"
                     "{\n"
                     "    return [self yy_modelInitWithCoder:coder];\n"
-                    "}";
+                    "}\n";
     } else {
         methodStr = @"";
     }

@@ -60,6 +60,9 @@
 
 @property (nonatomic,assign) BOOL isPost;
 @property (weak) IBOutlet NSButton *archiveSwitch;
+@property (weak) IBOutlet NSTextField *desTextField;
+@property (weak) IBOutlet NSTextField *userTextFiled;
+@property (weak) IBOutlet NSTextField *projectTextFiled;
 
 @end
 
@@ -85,7 +88,15 @@
 
     self.archiveSwitch.state = (NSControlStateValue) [[NSUserDefaults standardUserDefaults] objectForKey:@"isArchive"];
 
+    NSString *userStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
+    if (userStr.length > 0) {
+        self.userTextFiled.stringValue = userStr;
+    }
 
+    NSString *projectStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"project"];
+    if (projectStr.length > 0) {
+        self.projectTextFiled.stringValue = projectStr;
+    }
 }
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -437,7 +448,10 @@
 - (IBAction)enterButtonClick:(NSButton *)sender {
     
     [[NSUserDefaults standardUserDefaults] setValue:self.superClassTextfield.stringValue forKey:@"SuperClass"];
-    
+    [[NSUserDefaults standardUserDefaults] setValue:self.desTextField.stringValue.length <= 0 ? @"" : self.desTextField.stringValue forKey:@"Des"];
+    [[NSUserDefaults standardUserDefaults] setValue:self.userTextFiled.stringValue.length <= 0 ? @"" : self.userTextFiled.stringValue forKey:@"user"];
+    [[NSUserDefaults standardUserDefaults] setValue:self.projectTextFiled.stringValue.length <= 0 ? @"" : self.projectTextFiled.stringValue forKey:@"project"];
+
            
        //self.classContentTextView.string = @"";
        //self.mainClassContentTextView.string = @"";

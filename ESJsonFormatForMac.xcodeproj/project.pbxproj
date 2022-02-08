@@ -15,8 +15,6 @@
 		FB7C76B61EC554B100949F64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7C76B51EC554B100949F64 /* ViewController.m */; };
 		FB7C76B81EC554B100949F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7C76B71EC554B100949F64 /* Assets.xcassets */; };
 		FB7C76BB1EC554B100949F64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7C76B91EC554B100949F64 /* Main.storyboard */; };
-		FB7C76C61EC554B100949F64 /* ESJsonFormatForMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7C76C51EC554B100949F64 /* ESJsonFormatForMacTests.m */; };
-		FB7C76D11EC554B100949F64 /* ESJsonFormatForMacUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7C76D01EC554B100949F64 /* ESJsonFormatForMacUITests.m */; };
 		FB7C76E81EC554D400949F64 /* ESDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7C76E01EC554D400949F64 /* ESDialogController.m */; };
 		FB7C76E91EC554D400949F64 /* ESDialogController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7C76E11EC554D400949F64 /* ESDialogController.xib */; };
 		FB7C76EA1EC554D400949F64 /* ESInputJsonController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7C76E31EC554D400949F64 /* ESInputJsonController.m */; };
@@ -35,23 +33,6 @@
 		FB7C773D1EC560E800949F64 /* ESSettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7C773B1EC560E800949F64 /* ESSettingController.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FB7C76C21EC554B100949F64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB7C76A31EC554B100949F64 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB7C76AA1EC554B100949F64;
-			remoteInfo = ESJsonFormatForMac;
-		};
-		FB7C76CD1EC554B100949F64 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FB7C76A31EC554B100949F64 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FB7C76AA1EC554B100949F64;
-			remoteInfo = ESJsonFormatForMac;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		FB4532661EE01AAD00B5457C /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		FB4532671EE01AAD00B5457C /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
@@ -68,12 +49,6 @@
 		FB7C76B71EC554B100949F64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7C76BA1EC554B100949F64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB7C76BC1EC554B100949F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB7C76C11EC554B100949F64 /* ESJsonFormatForMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESJsonFormatForMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7C76C51EC554B100949F64 /* ESJsonFormatForMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESJsonFormatForMacTests.m; sourceTree = "<group>"; };
-		FB7C76C71EC554B100949F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB7C76CC1EC554B100949F64 /* ESJsonFormatForMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESJsonFormatForMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB7C76D01EC554B100949F64 /* ESJsonFormatForMacUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESJsonFormatForMacUITests.m; sourceTree = "<group>"; };
-		FB7C76D21EC554B100949F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB7C76DF1EC554D400949F64 /* ESDialogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESDialogController.h; sourceTree = "<group>"; };
 		FB7C76E01EC554D400949F64 /* ESDialogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESDialogController.m; sourceTree = "<group>"; };
 		FB7C76E11EC554D400949F64 /* ESDialogController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESDialogController.xib; sourceTree = "<group>"; };
@@ -114,20 +89,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB7C76BE1EC554B100949F64 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7C76C91EC554B100949F64 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -135,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				FB7C76AD1EC554B100949F64 /* ESJsonFormatForMac */,
-				FB7C76C41EC554B100949F64 /* ESJsonFormatForMacTests */,
-				FB7C76CF1EC554B100949F64 /* ESJsonFormatForMacUITests */,
 				FB7C76AC1EC554B100949F64 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -145,8 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				FB7C76AB1EC554B100949F64 /* ESJsonFormatForMac.app */,
-				FB7C76C11EC554B100949F64 /* ESJsonFormatForMacTests.xctest */,
-				FB7C76CC1EC554B100949F64 /* ESJsonFormatForMacUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,24 +136,6 @@
 				FB7C76B21EC554B100949F64 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FB7C76C41EC554B100949F64 /* ESJsonFormatForMacTests */ = {
-			isa = PBXGroup;
-			children = (
-				FB7C76C51EC554B100949F64 /* ESJsonFormatForMacTests.m */,
-				FB7C76C71EC554B100949F64 /* Info.plist */,
-			);
-			path = ESJsonFormatForMacTests;
-			sourceTree = "<group>";
-		};
-		FB7C76CF1EC554B100949F64 /* ESJsonFormatForMacUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FB7C76D01EC554B100949F64 /* ESJsonFormatForMacUITests.m */,
-				FB7C76D21EC554B100949F64 /* Info.plist */,
-			);
-			path = ESJsonFormatForMacUITests;
 			sourceTree = "<group>";
 		};
 		FB7C76DE1EC554D400949F64 /* Controller */ = {
@@ -296,42 +235,6 @@
 			productReference = FB7C76AB1EC554B100949F64 /* ESJsonFormatForMac.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB7C76C01EC554B100949F64 /* ESJsonFormatForMacTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB7C76D81EC554B100949F64 /* Build configuration list for PBXNativeTarget "ESJsonFormatForMacTests" */;
-			buildPhases = (
-				FB7C76BD1EC554B100949F64 /* Sources */,
-				FB7C76BE1EC554B100949F64 /* Frameworks */,
-				FB7C76BF1EC554B100949F64 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB7C76C31EC554B100949F64 /* PBXTargetDependency */,
-			);
-			name = ESJsonFormatForMacTests;
-			productName = ESJsonFormatForMacTests;
-			productReference = FB7C76C11EC554B100949F64 /* ESJsonFormatForMacTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FB7C76CB1EC554B100949F64 /* ESJsonFormatForMacUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB7C76DB1EC554B100949F64 /* Build configuration list for PBXNativeTarget "ESJsonFormatForMacUITests" */;
-			buildPhases = (
-				FB7C76C81EC554B100949F64 /* Sources */,
-				FB7C76C91EC554B100949F64 /* Frameworks */,
-				FB7C76CA1EC554B100949F64 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FB7C76CE1EC554B100949F64 /* PBXTargetDependency */,
-			);
-			name = ESJsonFormatForMacUITests;
-			productName = ESJsonFormatForMacUITests;
-			productReference = FB7C76CC1EC554B100949F64 /* ESJsonFormatForMacUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -345,16 +248,6 @@
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
-					FB7C76C01EC554B100949F64 = {
-						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FB7C76AA1EC554B100949F64;
-					};
-					FB7C76CB1EC554B100949F64 = {
-						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FB7C76AA1EC554B100949F64;
-					};
 				};
 			};
 			buildConfigurationList = FB7C76A61EC554B100949F64 /* Build configuration list for PBXProject "ESJsonFormatForMac" */;
@@ -362,6 +255,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -371,8 +265,6 @@
 			projectRoot = "";
 			targets = (
 				FB7C76AA1EC554B100949F64 /* ESJsonFormatForMac */,
-				FB7C76C01EC554B100949F64 /* ESJsonFormatForMacTests */,
-				FB7C76CB1EC554B100949F64 /* ESJsonFormatForMacUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -387,20 +279,6 @@
 				FB7C76E91EC554D400949F64 /* ESDialogController.xib in Resources */,
 				FB7C773D1EC560E800949F64 /* ESSettingController.xib in Resources */,
 				FB7C76BB1EC554B100949F64 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7C76BF1EC554B100949F64 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7C76CA1EC554B100949F64 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,36 +311,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB7C76BD1EC554B100949F64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB7C76C61EC554B100949F64 /* ESJsonFormatForMacTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB7C76C81EC554B100949F64 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB7C76D11EC554B100949F64 /* ESJsonFormatForMacUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FB7C76C31EC554B100949F64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB7C76AA1EC554B100949F64 /* ESJsonFormatForMac */;
-			targetProxy = FB7C76C21EC554B100949F64 /* PBXContainerItemProxy */;
-		};
-		FB7C76CE1EC554B100949F64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FB7C76AA1EC554B100949F64 /* ESJsonFormatForMac */;
-			targetProxy = FB7C76CD1EC554B100949F64 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FB7C76B91EC554B100949F64 /* Main.storyboard */ = {
@@ -593,56 +442,6 @@
 			};
 			name = Release;
 		};
-		FB7C76D91EC554B100949F64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ESJsonFormatForMacTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhengxu.ESJsonFormatForMacTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ESJsonFormatForMac.app/Contents/MacOS/ESJsonFormatForMac";
-			};
-			name = Debug;
-		};
-		FB7C76DA1EC554B100949F64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ESJsonFormatForMacTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhengxu.ESJsonFormatForMacTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ESJsonFormatForMac.app/Contents/MacOS/ESJsonFormatForMac";
-			};
-			name = Release;
-		};
-		FB7C76DC1EC554B100949F64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ESJsonFormatForMacUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhengxu.ESJsonFormatForMacUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ESJsonFormatForMac;
-			};
-			name = Debug;
-		};
-		FB7C76DD1EC554B100949F64 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ESJsonFormatForMacUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhengxu.ESJsonFormatForMacUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ESJsonFormatForMac;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -660,24 +459,6 @@
 			buildConfigurations = (
 				FB7C76D61EC554B100949F64 /* Debug */,
 				FB7C76D71EC554B100949F64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB7C76D81EC554B100949F64 /* Build configuration list for PBXNativeTarget "ESJsonFormatForMacTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB7C76D91EC554B100949F64 /* Debug */,
-				FB7C76DA1EC554B100949F64 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB7C76DB1EC554B100949F64 /* Build configuration list for PBXNativeTarget "ESJsonFormatForMacUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB7C76DC1EC554B100949F64 /* Debug */,
-				FB7C76DD1EC554B100949F64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
